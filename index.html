@@ -4,6 +4,7 @@
 <head>
   <meta name="description" content="Jetzt online zum Besuch der Sternsinger anmelden." />
   <meta charset="utf-8">
+
   <title>Anmeldung Sternsingen 2021</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -11,17 +12,20 @@
               crossorigin="anonymous">
 </head>
 
-<body>
+<body style="overflow-y: hidden">
   
-<div id="maindiv">
+<div id="maindiv" class="h-100 w-100">
   <img id="header" src="img/header.jpg" alt="Aktion Drekönigssingen 2021" class="d-block mx-auto col-10 col-md-8 col-lg-4">
-  <div class=" embed-responsive">
-    <iframe class="mx-auto embed-responsive-item" src="https://docs.google.com/forms/d/e/1FAIpQLScdoElv0jQ_YWwEAVWVxE-h2AhlpLW_vBOPmVked9kfNMf-3g/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
-  </div>
+    <iframe id="form" class="mx-auto w-100" height="3000" src="https://docs.google.com/forms/d/e/1FAIpQLScdoElv0jQ_YWwEAVWVxE-h2AhlpLW_vBOPmVked9kfNMf-3g/viewform?embedded=true" frameborder="0">Wird geladen…</iframe>
 </div>
 
 
     <script src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.16.1/dist/umd/popper.min.js,npm/jquery@3.5.1/dist/jquery.min.js,npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
             crossorigin="anonymous"></script>
+<script>
+var x = document.documentElement.clientHeight - document.getElementById("header").offsetHeight;
+console.log(x);
+document.getElementById("form").setAttribute("height", x);
+</script>
 </body>
 </html>
